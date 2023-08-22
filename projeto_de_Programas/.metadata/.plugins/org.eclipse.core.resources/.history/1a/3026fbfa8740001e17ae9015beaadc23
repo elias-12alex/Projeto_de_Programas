@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+
+
+public class Ensalamento {
+	
+	ArrayList<Sala> salas;
+	ArrayList<Turma> turmas;
+	ArrayList<TurmaEmSala> ensalamento;
+	Ensalamento(){}
+	void addSala(Sala sala) {}
+	void addTurma(Turma turma) {
+		
+		
+	}
+	Sala getSala(Turma turma) {}
+	boolean salaDisponivel(Sala sala, int horario) {}
+	boolean salaDisponivel(Sala sala, ArrayList<Integer> horarios) {}
+	boolean	alocar(Turma turma, Sala sala) {}
+	void	alocarTodas() {}
+	int	getTotalTurmasAlocadas() {}
+	int	getTotalEspacoLivre() {}
+	String	relatorioResumoEnsalamento() {}
+	String	relatorioTurmasPorSala() {}
+	String	relatorioSalasPorTurma() {}
+	
+	
+}

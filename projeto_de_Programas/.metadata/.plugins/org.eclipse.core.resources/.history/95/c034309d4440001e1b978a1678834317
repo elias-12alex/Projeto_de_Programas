@@ -1,0 +1,53 @@
+/*
+ * Projetos_de_Programas
+ * Atividade_Lista_5
+ * @EliasAlexander
+ * 
+ * */
+import java.util.ArrayList;
+
+public class Turma {
+	String nome;
+	String professor;
+	int numAlunos;
+	boolean acessivel;
+	ArrayList<Integer> horarios = new ArrayList<>();
+	
+    	
+	Turma(){}
+	
+	Turma(String nome, String professor, int numAlunos, boolean acessivel){
+		this.nome = nome;
+		this.professor = professor;
+		this.numAlunos = numAlunos;
+		this.acessivel = acessivel;
+	}
+
+	
+	void addHorario(int horario) {
+        horarios.add(horario);
+	}
+	
+
+    public String getHorariosString() {
+        StringBuilder horariosString = new StringBuilder();
+        String[] diasSemana = { "segunda", "terça", "quarta", "quinta", "sexta" };
+
+        for (int horario : horarios) {
+            int dia = (horario - 1) % 7;
+            int hora = (horario - 1) / 7 * 2 + 8;
+            horariosString.append(diasSemana[dia]).append(" ").append(hora).append("hs, ");
+        }
+
+        return horariosString.substring(0, horariosString.length() - 2); // Remove a última vírgula e espaço
+    }
+
+    public String getDescricao() {
+        String acessivelString = acessivel ? "sim" : "não";
+        return "Turma: " + nome + "\nProfessor: " + professor + "\nNúmero de Alunos: " + numAlunos
+                + "\nHorário: " + getHorariosString() + "\nAcessível: " + acessivelString;
+    }
+}
+
+    	
+    	

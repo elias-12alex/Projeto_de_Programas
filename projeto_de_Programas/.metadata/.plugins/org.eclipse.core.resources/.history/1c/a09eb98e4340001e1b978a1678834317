@@ -1,0 +1,25 @@
+/*
+ * Projetos_de_Programas
+ * Atividade_Lista_5
+ * @EliasAlexander
+ * 
+ * */
+public class EnsalamentoMain {
+	public static void main(String[] args) {
+        // Criando objetos Turma
+        Turma turma1 = new Turma("Algoritmos e Estrutura de Dados I", "Edleno Silva", 60, true);
+        Turma turma2 = new Turma("Programação Orientada a Objetos", "Maria Oliveira", 45, false);
+
+        // Adicionando horários às turmas
+        turma1.addHorario(1); // Segunda 8hs
+        turma1.addHorario(15); // Quarta 8hs
+        turma1.addHorario(29); // Sexta 8hs
+
+        turma2.addHorario(2); // Terça 10hs
+        turma2.addHorario(17); // Quinta 12hs
+
+        // Exibindo descrição das turmas
+        System.out.println("Turma 1:\n" + turma1.getDescricao());
+        System.out.println("\nTurma 2:\n" + turma2.getDescricao());
+    }
+}

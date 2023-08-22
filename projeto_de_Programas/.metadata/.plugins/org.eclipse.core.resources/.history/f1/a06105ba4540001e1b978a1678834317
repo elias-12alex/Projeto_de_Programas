@@ -1,0 +1,22 @@
+/*
+ * Projetos_de_Programas
+ * Atividade_Lista_5
+ * @EliasAlexander
+ * 
+ * */
+public class EnsalamentoMain {
+	public static void main(String[] args) {
+        // Criando objetos Turma
+        Turma turma1 = new Turma("Algoritmos e Estrutura de Dados I", "Edleno Silva", 60, true);
+
+        // Adicionando horários às turmas
+        turma1.addHorario(5); // Segunda 8hs
+        turma1.addHorario(19); // Quarta 8hs
+        turma1.addHorario(33); // Sexta 8hs
+
+
+        // Exibindo descrição das turmas
+        System.out.println(turma1.getDescricao());
+
+    }
+}

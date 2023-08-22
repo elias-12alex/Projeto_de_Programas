@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class ContaEnergia {
+	public static void main(String[]args) {
+		Scanner sc = new Scanner(System.in);
+		int consumo = sc.nextInt();
+		char tipo = sc.next().charAt(0);
+		double valor;
+		
+		while(true) {
+			if(consumo <= 500 && tipo == 1) {
+				valor = consumo*0.4;
+				System.out.printf("%.2f", valor);
+			}else if (consumo > 500 && tipo == 1){
+				valor = consumo*0.65;
+				System.out.printf("%.2f", valor);
+			}else if(consumo <= 1000 && tipo == 2) {
+				valor = consumo*0.55;
+				System.out.printf("%.2f", valor);
+			}else if(consumo > 500 && tipo == 2){
+				valor = consumo*0.6;
+				System.out.printf("%.2f", valor);
+			}else if(consumo <= 5000 && tipo == 3) {
+				valor = consumo*0.55;
+				System.out.printf("%.2f", valor);
+			}else if(consumo > 5000 && tipo == 3) {
+				valor = consumo*0.6;
+				System.out.printf("%.2f", valor);
+			}else {
+				System.out.printf("-1.00");
+			}
+		sc.close();
+		}
+		
+		
+	}
+}
+
